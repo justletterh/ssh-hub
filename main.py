@@ -14,6 +14,8 @@ def stop():
     try:
         sys.exit()
     except SystemExit:
+        pass
+    finally:
         get_app().exit()
 def button1_clicked():
     txt()
@@ -75,5 +77,7 @@ if __name__ == "__main__":
     try:
         main()
     except:
+        pass
+    finally:
         for i in range(get_size().lines):
             print("")
